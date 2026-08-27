@@ -18,6 +18,10 @@ import {
   X,
 } from "lucide-react";
 import faviconUrl from "../outputs/Feloklear-logo.png";
+import campaignImageUrl from "../outputs/feloklear images/feloklear.png";
+import productPortraitUrl from "../outputs/feloklear images/WhatsApp Image 2026-08-27 at 8.28.07 AM.jpeg";
+import productPortraitAltUrl from "../outputs/feloklear images/WhatsApp Image 2026-08-27 at 8.28.06 AM.jpeg";
+import productVideoUrl from "../outputs/feloklear images/Feloklear.mp4";
 import "./styles.css";
 
 const favicon = document.createElement("link");
@@ -543,7 +547,26 @@ function Hero() {
           </div>
         </Reveal>
         <Reveal delay={0.12}>
-          <ProductMockup />
+          <div className="relative mx-auto max-w-xl">
+            <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white p-3 shadow-soft sm:p-4">
+              <img
+                src={productPortraitUrl}
+                alt="Woman holding a FELOKLEAR capsule box"
+                className="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center"
+              />
+              <div className="flex items-center justify-between gap-4 px-2 pb-1 pt-4 sm:px-3">
+                <div>
+                  <p className="font-serif text-xl text-fern">
+                    FELOKLEAR® Capsule
+                  </p>
+                  <p className="mt-1 text-sm text-bark">
+                    A formulation by AfrOganiks
+                  </p>
+                </div>
+                <BadgeCheck className="shrink-0 text-rose" />
+              </div>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>
@@ -664,7 +687,17 @@ function App() {
         >
           <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <Reveal>
-              <ProductMockup compact />
+              <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white p-3 shadow-soft sm:p-4">
+                <img
+                  src={productPortraitAltUrl}
+                  alt="Woman presenting the FELOKLEAR capsule box"
+                  className="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center"
+                />
+                <p className="px-2 pb-1 pt-4 text-sm leading-6 text-bark sm:px-3">
+                  A real product view helps you recognise the packaging when
+                  choosing an authorised source.
+                </p>
+              </div>
             </Reveal>
             <Reveal>
               <p className="text-lg leading-8 text-bark">
@@ -779,17 +812,51 @@ function App() {
           </Reveal>
         </Section>
 
+        <Section eyebrow="See The Product" title="A closer look at FELOKLEAR®">
+          <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+            <Reveal className="overflow-hidden rounded-[2rem] bg-ink p-2 shadow-soft sm:p-3">
+              <video
+                className="aspect-video w-full rounded-[1.5rem] object-cover"
+                controls
+                playsInline
+                preload="metadata"
+                src={productVideoUrl}
+                aria-label="FELOKLEAR product video"
+              />
+            </Reveal>
+            <Reveal className="space-y-5">
+              <p className="text-lg leading-8 text-bark">
+                See the product and packaging before you place an order. Use the
+                consultant chat for questions about the protocol, safety, or
+                whether it is appropriate for your situation.
+              </p>
+              <CTAButton href="/chat" variant="secondary">
+                <MessageCircle size={16} /> Speak To A Consultant
+              </CTAButton>
+            </Reveal>
+          </div>
+        </Section>
+
         <Section title="Don't just buy a capsule. Know what you're putting into your body.">
-          <div className="grid gap-6 lg:grid-cols-3">
-            <Fact icon={ShieldCheck} label="NAFDAC REG. NO. A7-2459L" />
-            <Fact
-              icon={PackageCheck}
-              label="Product: Feloklear Capsule 500 mg"
-            />
-            <Fact
-              icon={BadgeCheck}
-              label="Manufacturer: AfrOganiks Industries"
-            />
+          <div className="grid items-center gap-8 lg:grid-cols-[0.72fr_1.28fr]">
+            <Reveal className="overflow-hidden rounded-[1.5rem] border border-moss/10 bg-white p-2 shadow-soft">
+              <img
+                src={campaignImageUrl}
+                alt="FELOKLEAR campaign artwork showing the product and manufacturer details"
+                className="aspect-[4/5] w-full rounded-[1.1rem] object-cover object-top"
+              />
+            </Reveal>
+            <div className="grid gap-6 lg:grid-cols-3">
+              <Fact icon={ShieldCheck} label="NAFDAC REG. NO. A7-2459L" />
+              <Fact
+                icon={PackageCheck}
+                label="Product: Feloklear Capsule 500 mg"
+              />
+              <Fact
+                icon={BadgeCheck}
+                label="Manufacturer: AfrOganiks Industries"
+              />
+            </div>
           </div>
           <Reveal className="mt-7 rounded-3xl border border-rose/20 bg-rose/10 p-6 text-center text-lg font-semibold text-fern">
             When purchasing, insist on genuine Feloklear® from an authorised
