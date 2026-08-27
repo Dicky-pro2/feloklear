@@ -19,8 +19,9 @@ import {
 } from "lucide-react";
 import faviconUrl from "../outputs/Feloklear-logo.png";
 import campaignImageUrl from "../outputs/feloklear images/feloklear.png";
-import productPortraitUrl from "../outputs/feloklear images/WhatsApp Image 2026-08-27 at 8.28.07 AM.jpeg";
-import productPortraitAltUrl from "../outputs/feloklear images/WhatsApp Image 2026-08-27 at 8.28.06 AM.jpeg";
+import heroCampaignImageUrl from "../outputs/feloklear images/feloklear1.jpeg";
+import productPortraitUrl from "../outputs/feloklear images/feloklear3.jpeg";
+import productPortraitAltUrl from "../outputs/feloklear images/feloklear2.jpeg";
 import productVideoUrl from "../outputs/feloklear images/Feloklear.mp4";
 import "./styles.css";
 
@@ -550,9 +551,9 @@ function Hero() {
           <div className="relative mx-auto max-w-xl">
             <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white p-3 shadow-soft sm:p-4">
               <img
-                src={productPortraitUrl}
-                alt="Woman holding a FELOKLEAR capsule box"
-                className="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center"
+                src={heroCampaignImageUrl}
+                alt="Feloklear campaign artwork explaining the product and its reproductive-health focus"
+                className="w-full rounded-[1.5rem] object-contain object-top"
               />
               <div className="flex items-center justify-between gap-4 px-2 pb-1 pt-4 sm:px-3">
                 <div>
@@ -560,7 +561,7 @@ function Hero() {
                     FELOKLEAR® Capsule
                   </p>
                   <p className="mt-1 text-sm text-bark">
-                    A formulation by AfrOganiks
+                    See what the product is about
                   </p>
                 </div>
                 <BadgeCheck className="shrink-0 text-rose" />
@@ -841,8 +842,8 @@ function App() {
           <div className="grid items-center gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <Reveal className="overflow-hidden rounded-[1.5rem] border border-moss/10 bg-white p-2 shadow-soft">
               <img
-                src={campaignImageUrl}
-                alt="FELOKLEAR campaign artwork showing the product and manufacturer details"
+                src={productPortraitUrl}
+                alt="Woman holding a FELOKLEAR capsule box"
                 className="aspect-[4/5] w-full rounded-[1.1rem] object-cover object-top"
               />
             </Reveal>
@@ -1594,7 +1595,14 @@ function Footer() {
   const homePrefix = window.location.pathname === "/" ? "" : "/";
   return (
     <footer className="bg-ink px-4 py-10 text-linen sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1fr_1fr_1fr]">
+        <div className="overflow-hidden rounded-2xl border border-linen/15 bg-white/10 p-2">
+          <img
+            src={campaignImageUrl}
+            alt="FELOKLEAR campaign artwork"
+            className="aspect-[4/5] w-full rounded-xl object-cover object-top"
+          />
+        </div>
         <div>
           <p className="font-serif text-2xl">FELOKLEAR®</p>
           <p className="mt-3 text-sm text-linen/75">AfrOganiks Industries</p>
