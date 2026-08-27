@@ -17,7 +17,14 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
+import faviconUrl from "../outputs/Feloklear-logo.png";
 import "./styles.css";
+
+const favicon = document.createElement("link");
+favicon.rel = "icon";
+favicon.type = "image/png";
+favicon.href = faviconUrl;
+document.head.appendChild(favicon);
 
 const navLinks = [
   ["Why Feloklear", "#why"],
