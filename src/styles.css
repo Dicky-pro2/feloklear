@@ -15,6 +15,13 @@ html {
 body {
   margin: 0;
   background: #fffdf8;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 ::selection {
@@ -36,5 +43,21 @@ body {
 @media (max-width: 1023px) {
   body {
     padding-bottom: 78px;
+  }
+}
+
+@media (max-width: 359px) {
+  body {
+    padding-bottom: 72px;
+  }
+
+  .mobile-sticky-cta {
+    padding: 0.625rem;
+  }
+
+  .mobile-sticky-cta a {
+    padding-inline: 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
   }
 }
