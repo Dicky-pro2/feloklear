@@ -174,6 +174,9 @@ const quickQuestions = [
   "Does it guarantee pregnancy?",
 ];
 
+const consultantWhatsAppNumber = "+234 810 388 6962";
+const consultantWhatsAppUrl = "https://wa.me/2348103886962";
+
 const botResponses = [
   {
     keywords: ["price", "cost", "how much", "pay", "payment", "₦", "naira"],
@@ -421,7 +424,7 @@ function Navbar() {
         aria-label="Main navigation"
       >
         <a href="/" className="font-serif text-2xl font-bold text-fern">
-          FELOKLEAR®
+          FELOKLEAR
         </a>
         <div className="hidden items-center gap-7 lg:flex">
           {navLinks.map(([label, href]) => (
@@ -526,7 +529,7 @@ function Hero() {
           </p>
           <div className="mt-8 rounded-3xl border border-moss/10 bg-white/70 p-6">
             <p className="font-serif text-2xl text-fern">
-              Meet FELOKLEAR® Capsule
+              Meet FELOKLEAR Capsule
             </p>
             <p className="mt-3 leading-7 text-bark">
               An AfrOganiks formulation developed for women's reproductive and
@@ -558,7 +561,7 @@ function Hero() {
               <div className="flex items-center justify-between gap-4 px-2 pb-1 pt-4 sm:px-3">
                 <div>
                   <p className="font-serif text-xl text-fern">
-                    FELOKLEAR® Capsule
+                    FELOKLEAR Capsule
                   </p>
                   <p className="mt-1 text-sm text-bark">
                     See what the product is about
@@ -702,7 +705,7 @@ function App() {
             </Reveal>
             <Reveal>
               <p className="text-lg leading-8 text-bark">
-                Feloklear® Capsule is an AfrOganiks formulation containing three
+                Feloklear Capsule is an AfrOganiks formulation containing three
                 botanical ingredients traditionally used in herbal health
                 preparations.
               </p>
@@ -786,13 +789,13 @@ function App() {
               </p>
               <p>
                 <strong>
-                  Do not take Feloklear® with soft drinks or other carbonated
+                  Do not take Feloklear with soft drinks or other carbonated
                   drinks.
                 </strong>
               </p>
             </div>
             <CTAButton className="mt-8 w-full sm:w-auto" variant="light">
-              Start My FELOKLEAR® Protocol
+              Start My FELOKLEAR Protocol
             </CTAButton>
           </Reveal>
         </Section>
@@ -813,7 +816,7 @@ function App() {
           </Reveal>
         </Section>
 
-        <Section eyebrow="See The Product" title="A closer look at FELOKLEAR®">
+        <Section eyebrow="See The Product" title="A closer look at FELOKLEAR">
           <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <Reveal className="overflow-hidden rounded-[2rem] bg-ink p-2 shadow-soft sm:p-3">
               <video
@@ -919,7 +922,7 @@ function App() {
             <Warning text="Lactating mothers should not use Feloklear®." />
           </div>
           <Reveal className="mt-6 rounded-3xl bg-white p-6 text-bark shadow-soft">
-            If trying to conceive while using Feloklear®, the supplied document
+            If trying to conceive while using Feloklear, the supplied document
             advises careful monitoring and stopping once pregnancy is confirmed.
           </Reveal>
         </Section>
@@ -928,7 +931,7 @@ function App() {
           <Reveal className="rounded-[2rem] border border-rose/25 bg-rose/10 p-8">
             <AlertTriangle className="mb-4 text-rose" />
             <p className="text-lg leading-8 text-bark">
-              The supplied document states that Feloklear® should not be taken
+              The supplied document states that Feloklear should not be taken
               with therapeutic medicines such as anti-malaria medicines and
               anti-fungal medicines, except vitamins and food supplements,
               because ingredients may interact with therapeutic drug
@@ -944,7 +947,7 @@ function App() {
         <Section title="What about side effects?" className="bg-linen">
           <Reveal className="mx-auto max-w-4xl rounded-[2rem] bg-white p-8 shadow-soft">
             <p className="text-lg leading-8 text-bark">
-              The supplied document states that Feloklear® is reported to have
+              The supplied document states that Feloklear is reported to have
               been well tolerated in a clinical trial using the stated dosing
               regimen, with an overall adverse-reaction incidence of
               approximately 5%.
@@ -997,14 +1000,14 @@ function App() {
             <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr]">
               <div>
                 <p className="text-xl leading-8 text-bark">
-                  The recommended FELOKLEAR® course is 4 packs for 60 days.
+                  The recommended FELOKLEAR course is 4 packs for 60 days.
                 </p>
                 <h3 className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-rose">
                   You get
                 </h3>
                 <Checklist
                   items={[
-                    "4 × FELOKLEAR® 500 mg",
+                    "4 × FELOKLEAR 500 mg",
                     "60 capsules per pack",
                     "240 capsules total",
                     "60-day recommended course",
@@ -1027,7 +1030,7 @@ function App() {
                 <p className="mt-5 font-serif text-6xl">₦50,000</p>
                 <div className="mt-8 grid gap-3">
                   <CTAButton className="w-full" variant="light">
-                    Order The 60-Day FELOKLEAR® Protocol
+                    Order The 60-Day FELOKLEAR Protocol
                   </CTAButton>
                   <CTAButton
                     className="w-full"
@@ -1079,10 +1082,10 @@ function OrderPage() {
                 FELOKLEAR® order
               </p>
               <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight sm:text-5xl">
-                Order the 60-day FELOKLEAR® protocol.
+                Order the 60-day FELOKLEAR protocol.
               </h1>
               <p className="mt-5 leading-8 text-linen/90">
-                Fill in your delivery and contact details. A FELOKLEAR®
+                Fill in your delivery and contact details. A FELOKLEAR  
                 consultant can use this information to confirm your order and
                 answer product questions.
               </p>
@@ -1097,7 +1100,7 @@ function OrderPage() {
               </div>
               <div className="mt-5 grid gap-3">
                 {[
-                  "4 × FELOKLEAR® 500 mg",
+                  "4 × FELOKLEAR 500 mg",
                   "60 capsules per pack",
                   "240 capsules total",
                   "NAFDAC REG. NO. A7-2459L",
@@ -1142,7 +1145,7 @@ function OrderPage() {
                       Customer details
                     </p>
                     <h2 className="mt-3 font-serif text-3xl text-fern">
-                      Where should we send your FELOKLEAR® protocol?
+                      Where should we send your FELOKLEAR protocol?
                     </h2>
                     <p className="mt-3 leading-7 text-bark">
                       Required fields are marked with an asterisk.
@@ -1164,8 +1167,8 @@ function OrderPage() {
                         </h3>
                         <p className="mt-2 leading-7 text-bark">
                           Pregnant women and lactating mothers should not use
-                          Feloklear®. If trying to conceive while using
-                          Feloklear®, careful monitoring and stopping once
+                          Feloklear. If trying to conceive while using
+                          Feloklear, careful monitoring and stopping once
                           pregnancy is confirmed is advised in the supplied
                           material.
                         </p>
@@ -1251,7 +1254,7 @@ function ChatPage() {
   const [messages, setMessages] = React.useState([
     {
       role: "consultant",
-      text: "Hello, welcome to FELOKLEAR®. I can answer questions from the supplied product brief about the protocol, ingredients, order details, and safety information.",
+      text: "Hello, welcome to FELOKLEAR. I can answer questions from the supplied product brief about the protocol, ingredients, order details, and safety information.",
     },
   ]);
   const [draft, setDraft] = React.useState("");
@@ -1319,7 +1322,7 @@ function ChatPage() {
                 Consultant chat
               </p>
               <h1 className="mt-4 font-serif text-4xl font-semibold leading-tight sm:text-5xl">
-                Speak with a FELOKLEAR® consultant.
+                Speak with a FELOKLEAR consultant.
               </h1>
               <p className="mt-5 leading-8 text-linen/90">
                 Ask questions about the product, the 60-day protocol, safety
@@ -1330,20 +1333,26 @@ function ChatPage() {
                   Brief-based assistant
                 </p>
                 <p className="mt-2 text-sm leading-6 text-linen/80">
-                  The bot answers only from the supplied FELOKLEAR® document. It
+                  The bot answers only from the supplied FELOKLEAR document. It
                   will not make pregnancy guarantees, cure claims, or personal
                   medical decisions.
                 </p>
               </div>
               <div className="mt-4 rounded-3xl bg-white/10 p-5">
-                <p className="font-semibold text-white">
-                  WhatsApp-ready placeholder
-                </p>
+                <p className="font-semibold text-white">Continue on WhatsApp</p>
                 <p className="mt-2 text-sm leading-6 text-linen/80">
-                  If the owner decides to use WhatsApp, this page can be changed
-                  to redirect to a WhatsApp chat link or keep this page with a
-                  WhatsApp button. No phone number has been supplied yet.
+                  Connect directly with the consultant at{" "}
+                  {consultantWhatsAppNumber}.
                 </p>
+                <CTAButton
+                  href={consultantWhatsAppUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="light"
+                  className="mt-4 w-full sm:w-auto"
+                >
+                  <MessageCircle size={16} /> WhatsApp consultant
+                </CTAButton>
               </div>
             </div>
           </Reveal>
@@ -1360,7 +1369,7 @@ function ChatPage() {
                   </div>
                   <div className="min-w-0">
                     <h2 className="truncate font-serif text-2xl text-fern">
-                      FELOKLEAR® Consultant
+                      FELOKLEAR Consultant
                     </h2>
                     <p className="text-sm leading-5 text-bark">
                       Usually attends to product and protocol questions
@@ -1439,12 +1448,13 @@ function ChatPage() {
                       Order instead
                     </CTAButton>
                     <CTAButton
-                      href="#"
+                      href={consultantWhatsAppUrl}
                       variant="secondary"
                       className="w-full"
-                      aria-disabled="true"
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                      WhatsApp link pending
+                      <MessageCircle size={16} /> WhatsApp consultant
                     </CTAButton>
                   </div>
                 </form>
@@ -1596,7 +1606,7 @@ function Footer() {
   return (
     <footer className="bg-ink px-4 py-10 text-linen sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1fr_1fr_1fr]">
-        <div className="overflow-hidden rounded-2xl border border-linen/15 bg-white/10 p-2">
+        <div className="mx-auto w-full max-w-[11rem] overflow-hidden rounded-2xl border border-linen/15 bg-white/10 p-2 lg:mx-0 lg:max-w-none">
           <img
             src={campaignImageUrl}
             alt="FELOKLEAR campaign artwork"
@@ -1604,7 +1614,7 @@ function Footer() {
           />
         </div>
         <div>
-          <p className="font-serif text-2xl">FELOKLEAR®</p>
+          <p className="font-serif text-2xl">FELOKLEAR</p>
           <p className="mt-3 text-sm text-linen/75">AfrOganiks Industries</p>
           <p className="mt-1 text-sm text-linen/75">NAFDAC REG. NO. A7-2459L</p>
         </div>
@@ -1627,7 +1637,7 @@ function Footer() {
             </CTAButton>
           </div>
           <p className="mt-5 text-xs leading-6 text-linen/60">
-            Safety and legal disclaimer: use Feloklear® responsibly and consult
+            Safety and legal disclaimer: use Feloklear responsibly and consult
             a qualified healthcare professional for diagnosis, treatment
             options, medication questions, pregnancy, lactation, unexpected
             reactions, or severe reactions.
