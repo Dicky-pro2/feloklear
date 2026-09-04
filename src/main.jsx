@@ -17,7 +17,7 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import faviconUrl from "./assets/images/feloklear-logo.png";
+import faviconUrl from "./assets/images/feloklear-favicon.png";
 import feloklearLogoUrl from "./assets/images/feloklear-navbar-logo.png";
 import motherBabyImageUrl from "./assets/images/mother-baby.jpg";
 import positiveTestImageUrl from "./assets/images/positive-test.jpg";
