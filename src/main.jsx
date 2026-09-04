@@ -17,7 +17,12 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import faviconUrl from "../outputs/Feloklear-logo.png";
+import faviconUrl from "./assets/images/feloklear-logo.png";
+import feloklearLogoUrl from "./assets/images/feloklear-logo.png";
+import motherBabyImageUrl from "./assets/images/mother-baby.jpg";
+import positiveTestImageUrl from "./assets/images/positive-test.jpg";
+import womanConcernedImageUrl from "./assets/images/woman-concerned.jpg";
+import hydrosalpinxEducationImageUrl from "./assets/images/hydrosalpinx-education.jpeg";
 import campaignImageUrl from "../outputs/feloklear images/feloklear.png";
 import heroCampaignImageUrl from "../outputs/feloklear images/feloklear1.jpeg";
 import productPortraitUrl from "../outputs/feloklear images/feloklear3.jpeg";
@@ -423,8 +428,12 @@ function Navbar() {
         className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
-        <a href="/" className="font-serif text-2xl font-bold text-fern">
-          FELOKLEAR
+        <a href="/" className="flex items-center" aria-label="FELOKLEAR home">
+          <img
+            src={feloklearLogoUrl}
+            alt="FELOKLEAR"
+            className="h-9 w-auto object-contain sm:h-10"
+          />
         </a>
         <div className="hidden items-center gap-7 lg:flex">
           {navLinks.map(([label, href]) => (
@@ -596,17 +605,27 @@ function App() {
         <Hero />
 
         <Section title="Your fertility journey deserves more than fear and guesswork.">
-          <Reveal className="mx-auto max-w-4xl rounded-[2rem] bg-white p-8 shadow-soft sm:p-12">
-            <p className="text-xl leading-9 text-bark">
-              Negative pregnancy tests, uncertainty, uncomfortable questions,
-              and the words "your tubes are blocked" can feel heavy. A fertility
-              diagnosis is information, not a verdict on your worth.
-            </p>
-            <p className="mt-5 text-lg leading-8 text-bark">
-              The next step is not panic. It is understanding, proper
-              evaluation, and responsible action.
-            </p>
-          </Reveal>
+          <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <Reveal className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-soft sm:p-4">
+              <img
+                src={womanConcernedImageUrl}
+                alt="Woman reflecting during a sensitive reproductive-health moment"
+                className="aspect-[4/3] w-full rounded-[1.5rem] object-cover object-center"
+                loading="lazy"
+              />
+            </Reveal>
+            <Reveal className="rounded-[2rem] bg-white p-8 shadow-soft sm:p-12">
+              <p className="text-xl leading-9 text-bark">
+                Negative pregnancy tests, uncertainty, uncomfortable questions,
+                and the words "your tubes are blocked" can feel heavy. A fertility
+                diagnosis is information, not a verdict on your worth.
+              </p>
+              <p className="mt-5 text-lg leading-8 text-bark">
+                The next step is not panic. It is understanding, proper
+                evaluation, and responsible action.
+              </p>
+            </Reveal>
+          </div>
         </Section>
 
         <Section
@@ -635,15 +654,13 @@ function App() {
                 </p>
               </div>
             </Reveal>
-            <Reveal className="rounded-[2rem] bg-porcelain p-8 shadow-soft">
-              <div className="mx-auto flex aspect-square max-w-md items-center justify-center rounded-full bg-gradient-to-br from-sage/20 to-rose/10">
-                <div className="relative h-64 w-64">
-                  <div className="absolute left-1/2 top-16 h-32 w-20 -translate-x-1/2 rounded-full border-[10px] border-rose/55" />
-                  <div className="absolute left-6 top-10 h-28 w-28 rounded-full border-[10px] border-moss/50 border-r-transparent border-b-transparent" />
-                  <div className="absolute right-6 top-10 h-28 w-28 rounded-full border-[10px] border-moss/50 border-l-transparent border-b-transparent" />
-                  <div className="absolute bottom-8 left-1/2 h-24 w-16 -translate-x-1/2 rounded-b-full bg-clay/30" />
-                </div>
-              </div>
+            <Reveal className="overflow-hidden rounded-[2rem] border border-moss/10 bg-porcelain p-3 shadow-soft sm:p-4">
+              <img
+                src={hydrosalpinxEducationImageUrl}
+                alt="Educational illustration showing hydrosalpinx and fallopian tube blockage"
+                className="aspect-square w-full rounded-[1.5rem] bg-white object-contain"
+                loading="lazy"
+              />
             </Reveal>
           </div>
         </Section>
@@ -964,31 +981,41 @@ function App() {
         </Section>
 
         <Section title="A word for the woman who has almost given up.">
-          <Reveal className="mx-auto max-w-4xl text-center">
-            <p className="text-xl leading-9 text-bark">
-              Maybe you've cried after another negative pregnancy test. Maybe
-              you've been asked uncomfortable questions. Maybe you've watched
-              friends become mothers while you continue waiting.
-            </p>
-            <p className="mt-6 font-serif text-3xl text-fern">
-              A fertility diagnosis is information, not a verdict on your worth.
-            </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-4">
-              {[
-                "Understand your body.",
-                "Get properly evaluated.",
-                "Take informed steps.",
-                "Keep hope alive.",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full bg-linen px-4 py-3 font-semibold text-fern"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </Reveal>
+          <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+            <Reveal>
+              <p className="text-xl leading-9 text-bark">
+                Maybe you've cried after another negative pregnancy test. Maybe
+                you've been asked uncomfortable questions. Maybe you've watched
+                friends become mothers while you continue waiting.
+              </p>
+              <p className="mt-6 font-serif text-3xl text-fern">
+                A fertility diagnosis is information, not a verdict on your worth.
+              </p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Understand your body.",
+                  "Get properly evaluated.",
+                  "Take informed steps.",
+                  "Keep hope alive.",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full bg-linen px-4 py-3 text-center font-semibold text-fern"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
+            <Reveal className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-soft sm:p-4">
+              <img
+                src={positiveTestImageUrl}
+                alt="Couple reacting to a pregnancy test in a hopeful home moment"
+                className="aspect-[4/3] w-full rounded-[1.5rem] object-cover object-center"
+                loading="lazy"
+              />
+            </Reveal>
+          </div>
         </Section>
 
         <Section
@@ -1060,6 +1087,27 @@ function OrderPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const orderMessage = [
+      "New FELOKLEAR order request",
+      "",
+      "Product: 60-day FELOKLEAR protocol",
+      "Price: ₦50,000",
+      "",
+      `Full name: ${formData.get("name") || ""}`,
+      `Phone number: ${formData.get("phone") || ""}`,
+      `WhatsApp number: ${formData.get("whatsapp") || ""}`,
+      `Email address: ${formData.get("email") || ""}`,
+      `Delivery address: ${formData.get("address") || ""}`,
+      `City / town: ${formData.get("city") || ""}`,
+      `State: ${formData.get("state") || ""}`,
+      `Delivery notes or questions: ${formData.get("notes") || ""}`,
+    ].join("\n");
+    const encodedMessage = encodeURIComponent(orderMessage);
+
+    window.open(`https://wa.me/2348103886962?text=${encodedMessage}`, "_blank", "noopener,noreferrer");
+    window.location.href = `mailto:jephterakaehie@gmail.com?subject=${encodeURIComponent("New FELOKLEAR order request")}&body=${encodedMessage}`;
+
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -1192,9 +1240,8 @@ function OrderPage() {
 
                   <div className="mt-8 grid min-w-0 gap-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
                     <p className="text-sm leading-6 text-bark">
-                      Form destination placeholder: connect this to WhatsApp,
-                      email, payment, CRM, or a backend endpoint when those
-                      details are provided.
+                      Your order details will be prepared for WhatsApp and
+                      email so a consultant can confirm your request.
                     </p>
                     <button
                       type="submit"
@@ -1568,33 +1615,43 @@ function FinalCTA() {
       id="consultant"
       className="bg-fern px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8"
     >
-      <Reveal className="mx-auto max-w-5xl text-center">
-        <Sparkles className="mx-auto mb-5 text-clay" size={34} />
-        <h2 className="font-serif text-4xl font-semibold sm:text-6xl">
-          YOUR BODY DESERVES ATTENTION.
-        </h2>
-        <p className="mt-3 font-serif text-3xl text-linen sm:text-5xl">
-          YOUR FUTURE DESERVES HOPE.
-        </p>
-        <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-linen/90">
-          You don't have to ignore the problem, live on internet rumours, buy
-          every product someone recommends, or give up on your reproductive
-          health.
-        </p>
-        <p className="mt-8 text-xl font-bold text-white">
-          START WITH KNOWLEDGE. TAKE RESPONSIBLE ACTION. TAKE CARE OF YOUR BODY.
-        </p>
-        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-          <CTAButton className="w-full sm:w-auto" variant="light">
-            Order Now — ₦50,000
-          </CTAButton>
-          <CTAButton
-            className="w-full sm:w-auto"
-            href="/chat"
-            variant="ghostLight"
-          >
-            Chat With A Consultant
-          </CTAButton>
+      <Reveal className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="overflow-hidden rounded-[2rem] bg-white/10 p-3 shadow-soft sm:p-4">
+          <img
+            src={motherBabyImageUrl}
+            alt="Mother holding a newborn in a calm home setting"
+            className="aspect-[4/3] w-full rounded-[1.5rem] object-cover object-center"
+            loading="lazy"
+          />
+        </div>
+        <div className="text-center lg:text-left">
+          <Sparkles className="mx-auto mb-5 text-clay lg:mx-0" size={34} />
+          <h2 className="font-serif text-4xl font-semibold sm:text-6xl">
+            YOUR BODY DESERVES ATTENTION.
+          </h2>
+          <p className="mt-3 font-serif text-3xl text-linen sm:text-5xl">
+            YOUR FUTURE DESERVES HOPE.
+          </p>
+          <p className="mt-7 max-w-3xl text-lg leading-8 text-linen/90">
+            You don't have to ignore the problem, live on internet rumours, buy
+            every product someone recommends, or give up on your reproductive
+            health.
+          </p>
+          <p className="mt-8 text-xl font-bold text-white">
+            START WITH KNOWLEDGE. TAKE RESPONSIBLE ACTION. TAKE CARE OF YOUR BODY.
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+            <CTAButton className="w-full sm:w-auto" variant="light">
+              Order Now — ₦50,000
+            </CTAButton>
+            <CTAButton
+              className="w-full sm:w-auto"
+              href="/chat"
+              variant="ghostLight"
+            >
+              Chat With A Consultant
+            </CTAButton>
+          </div>
         </div>
       </Reveal>
     </section>
