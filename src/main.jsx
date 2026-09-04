@@ -1106,7 +1106,7 @@ function OrderPage() {
     const encodedMessage = encodeURIComponent(orderMessage);
 
     window.open(`https://wa.me/2348103886962?text=${encodedMessage}`, "_blank", "noopener,noreferrer");
-    window.location.href = `mailto:jephterakaehie@gmail.com?subject=${encodeURIComponent("New FELOKLEAR order request")}&body=${encodedMessage}`;
+    window.location.href = `mailto:hello@afroganiks.com?subject=${encodeURIComponent("New FELOKLEAR order request")}&body=${encodedMessage}`;
 
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
